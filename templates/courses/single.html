@@ -1,0 +1,20 @@
+<h1>Courses</h1>
+
+<h3>{{course.Course.ID}}-{{course.Course.Name}}</h3>
+
+  <h3>Title: {{course.Course.Title}}</h3>
+  <h3>Subtitle: {{course.Course.Subtitle}}</h3>
+  <h3>Video Code: {{course.Course.VideoCode}}</h3>
+
+  <br/>
+  <h3>Modules: <h4>
+  {{#each course.ModuleList  as |module|}}
+  <h4>{{module.Module.Title}}</h4>
+  <div><p>{{module.Module.Description}}</p></div>
+
+  <ul>
+  {{#each module.LessonList  as |lesson|}}
+  <li>{{lesson.Title}}</li>
+  {{/each}}
+  </ul>
+  {{/each}}

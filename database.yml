@@ -1,0 +1,17 @@
+development:
+  dialect: postgres
+  database: slideshow_development
+  user: postgres
+  password: postgres
+  host: 127.0.0.1
+  pool: 5
+
+test:
+  dialect: postgres
+  database: slideshow_test
+  user: postgres
+  password: postgres
+  host: 127.0.0.1
+
+production:
+  url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/slideshow_production"}}
